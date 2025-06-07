@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Update existing carousel styles */
+        .carousel-item:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px; /* Reduced gradient height */
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+        }
+
+        .carousel-item img {
+            height: 300px; /* Reduced height from 400px to 300px */
+            object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
+        }
+
+        /* Add new carousel styles */
+        #carouselExampleIndicators {
+            margin: 40px auto;
+            max-width: 800px; /* Reduced max-width from 1000px to 800px */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-caption {
+            bottom: 30px; /* Adjusted position */
+            padding: 15px; /* Reduced padding */
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        .carousel-caption h1 {
+            font-size: 2rem; /* Reduced font size */
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-caption p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .carousel-indicators .active {
+            background-color: #fff;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <header class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Bandekar's</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item active">Home</a></li>
+                <li><a href="menu.html" class="nav-item">Menu</a></li>
+                <li><a href="#review" class="nav-item">Review</a></li>
+                <li><a href="#reservation" class="nav-item">Reservation</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div style="display: flex;justify-content: center;align-items: center;">
+            <section class="background-section">
+                <!-- Background content if any -->
+            </section>
+        </div>
+
+        <!-- Updated Horizontal Image Gallery Section -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://img.freepik.com/free-photo/curry-with-chicken-onions-indian-food-asian-cuisine_2829-4415.jpg"
+                        alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Malvani Chicken</h1>
+                        <p>Malvani Chicken Gravy is a rich and flavorful Konkani dish made with a blend 
+                            of roasted coconut, aromatic spices, and tender chicken, simmered to perfection.
+                             It has a bold, spicy taste that's deeply rooted in the 
+                            traditional cuisine of the Malvan region in Maharashtra.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="https://i.ytimg.com/vi/IWhcmAMrSKQ/sddefault.jpg"
+                        alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Prawns Curry</h1>
+                        <p>Malvani Prawns Curry is a spicy, coconut-based coastal delicacy made with fresh prawns and a special Malvani masala.
+                             It’s known for its bold flavors, featuring a perfect balance of heat and tanginess,
+                             typical of the Konkan region’s seafood dishes.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://media.istockphoto.com/id/980462262/photo/tasty-grilled-fish.jpg?s=612x612&w=0&k=20&c=e6m9uJ3mKotLv5x8lZjMqLklA8cM4bl1qJtMwdlCnq8="
+                        alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Mackerel Fry</h1>
+                        <p>Mackerel Fry, also known as Bangda Fry in the Konkan region, is a crispy and flavorful dish where
+                             fresh mackerel is marinated in a spicy masala and shallow-fried to perfection.
+                             It's a popular coastal treat, loved for its bold spices and juicy, flaky texture.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- Review Section -->
+        <section class="review-section" id="review">
+            <h1 class="review-heading">What Our Customers Say</h1>
+            <div class="row review-container">
+                <div class="col-md-7">
+                    <h3 class="review-sub-heading">Recent Reviews</h3>
+                    <div id="reviews-window" class="reviews-scroll">
+                        <div id="reviews-section"></div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5">
+                    <h3 class="review-sub-heading">Share Your Experience</h3>
+                    <form id="reviewForm" class="review-form">
+                        <div class="form-group">
+                            <input type="text" id="reviewName" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="review" placeholder="Tell us about your experience..." required></textarea>
+                        </div>
+                        <button type="submit" class="review-submit-btn">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservation-section" id="reservation">
+            <h1 class="reserve-heading">Reserve Your Table</h1>
+            <form id="reservationForm" style="color: aliceblue;">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact:</label>
+                    <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="members">Number of Members:</label>
+                    <input type="number" id="members" name="members" placeholder="Enter number of members" required
+                        min="1">
+                </div>
+                <button type="submit">Reserve Now</button>
+            </form>
+            <div id="output"></div>
+        </section>
+
+        <section class="location">
+            <h2 data-aos="fade-up">Find Us Here</h2>
+            <div class="map-container" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3845.9932333471647!2d73.83290727507475!3d15.424222684963505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb8375827cec1%3A0xb258ca176c799dbe!2sCalangute%20Beach!5e0!3m2!1sen!2sin!4v1701946546036!5m2!1sen!2sin"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +91-1234567890 | +91-9876543210</p>
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </section>
+
+    <script>
+        // Retrieve saved reviews from localStorage or use a default array if none exist
+        let reviews = JSON.parse(localStorage.getItem('reviews')) || [
+            { name: "Shivam Bandekar", review: "Great Food,Very tasty! Highly recommend.", date: "March 14, 2025" },
+            { name: "Arpit Bandekar", review: "Good quality, but delivery was slow.", date: "March 13, 2025" }
+        ];
+
+        // Function to display reviews
+        function displayReviews() {
+            const reviewsSection = document.getElementById('reviews-section');
+            reviewsSection.innerHTML = ''; // Clear the section first
+
+            reviews.forEach((review, index) => {
+                const reviewDiv = document.createElement('div');
+                reviewDiv.classList.add('review-box'); // Optional: Add a custom class for styling
+                reviewDiv.innerHTML = `
+                    <div class="review-header">
+                        <h5 class="review-name">${review.name}</h5>
+                        <p class="review-date">${review.date}</p> <!-- Display review date -->
+                    </div>
+                    <p class="review-text">${review.review}</p>
+                `;
+                reviewsSection.appendChild(reviewDiv);
+            });
+        }
+
+        function getFormattedDate() {
+            const currentDate = new Date();
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+            ];
+            const day = currentDate.getDate();
+            const month = monthNames[currentDate.getMonth()]; // Get the full month name
+            const year = currentDate.getFullYear();
+            return `${month} ${day}, ${year}`; // Return date in "Month Day, Year" format
+        }
+
+        // Add event listener to the form for submitting new reviews
+        document.getElementById('reviewForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent page reload on form submit
+
+            const name = document.getElementById('reviewName').value;
+            const review = document.getElementById('review').value;
+            const date = getFormattedDate(); // Get the formatted current date
+
+            // Add new review to the array
+            reviews.push({ name: name, review: review, date: date });
+
+            // Save the updated reviews array to localStorage
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            // Clear form fields
+            document.getElementById('reviewName').value = '';
+            document.getElementById('review').value = '';
+
+            // Re-display the reviews
+            displayReviews();
+        });
+
+        // Initial display of reviews when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            displayReviews();
+        });
+    </script>
+
+    <script type="module" src="script2.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    
+    <style>
+        .toast-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 4px;
+            z-index: 9999;
+            color: white;
+            animation: slideIn 0.5s ease;
+        }
+
+        .toast-success {
+            background-color: rgba(76, 175, 80, 0.9);
+        }
+
+        .toast-error {
+            background-color: rgba(244, 67, 54, 0.9);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCL9cIZFc6LBp57k-_stAHLwJJa7-3yNp0",
+            authDomain: "bandekars-1bacc.firebaseapp.com",
+            projectId: "bandekars-1bacc",
+            storageBucket: "bandekars-1bacc.appspot.com",
+            messagingSenderId: "510464721545",
+            appId: "1:510464721545:web:ca017300a6855ce1df7c58",
+            measurementId: "G-DJGGN0SY9R"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast-notification toast-${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            // Remove toast after 3 seconds
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        function validateContact(contact) {
+            // Remove any non-digit characters
+            const cleanContact = contact.replace(/\D/g, '');
+            
+            // Check if it's a valid 10-digit number
+            if (cleanContact.length !== 10) {
+                showToast("Please enter a valid 10-digit contact number", "error");
+                return false;
+            }
+            return cleanContact;
+        }
+
+        // Handle reservation form submission
+        const reservationForm = document.getElementById("reservationForm");
+        
+        if (reservationForm) {
+            reservationForm.addEventListener("submit", async function(event) {
+                event.preventDefault();
+                
+                // Disable submit button to prevent double submission
+                const submitButton = this.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                
+                try {
+                    // Get form values
+                    const name = document.getElementById("name").value;
+                    const contact = document.getElementById("contact").value;
+                    const date = document.getElementById("date").value;
+                    const members = document.getElementById("members").value;
+                    
+                    // Validate contact number
+                    const validContact = validateContact(contact);
+                    if (!validContact) {
+                        submitButton.disabled = false;
+                        return;
+                    }
+
+                    // Add reservation to Firestore
+                    const docRef = await addDoc(collection(db, "TableReservations"), {
+                        name: name,
+                        contact: validContact,
+                        date: date,
+                        members: parseInt(members),
+                        status: "Pending",
+                        timestamp: new Date()
+                    });
+                    
+                    showToast("Reservation submitted successfully! We'll contact you shortly.", "success");
+                    this.reset();
+                    
+                } catch (error) {
+                    console.error("Error adding reservation: ", error);
+                    showToast("Failed to submit reservation. Please try again.", "error");
+                } finally {
+                    // Re-enable submit button
+                    submitButton.disabled = false;
+                }
+            });
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<style>
+        .review-section {
+            padding: 60px 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
+        }
+
+        .review-heading {
+            text-align: center;
+            color: #ff9800;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .review-container {
+            padding: 0 30px;
+        }
+
+        .review-sub-heading {
+            color: #fff;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ff9800;
+            padding-bottom: 10px;
+        }
+
+        .reviews-scroll {
+            height: 340px;
+            overflow-y: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .review-box {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff9800;
+            transition: transform 0.3s ease;
+        }
+
+        .review-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .review-name {
+            color: #ff9800;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .review-date {
+            color: #aaa;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        .review-text {
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .review-form {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 152, 0, 0.2);
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 152, 0, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .review-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .review-form input:focus,
+        .review-form textarea:focus {
+            border-color: #ff9800;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.3);
+            outline: none;
+        }
+
+        .review-submit-btn {
+            background: linear-gradient(45deg, #ff9800, #ff5722);
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .review-submit-btn:hover {
+            background: linear-gradient(45deg, #ff5722, #ff9800);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
+        }
+    </style>
+
+<style>
+    .navbar {
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 15px 30px;
+        border-radius: 15px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 152, 0, 0.1);
+        box-shadow: 0 4px 30px rgba(255, 152, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo h1 {
+        color: #ff9800;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo-subtitle {
+        color: #fff;
+        font-size: 0.9em;
+        letter-spacing: 3px;
+        opacity: 0.8;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nav-item {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #ff9800;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    .nav-item:hover::after {
+        width: 80%;
+    }
+
+    .nav-item:hover {
+        color: #ff9800;
+        transform: translateY(-2px);
+    }
+
+    .nav-item.active {
+        color: #ff9800;
+        background: rgba(255, 152, 0, 0.1);
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #ff9800;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+        border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border-radius: 0 0 15px 15px;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-links.active {
+            display: flex;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-item').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+</script>
